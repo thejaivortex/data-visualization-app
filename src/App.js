@@ -19,6 +19,16 @@ function App() {
     <div className="app">
       <header>
         <h1>Data Visualization Tool</h1>
+        <div className="project-description">
+          <p>
+            📊 Transform your CSV data into interactive visualizations! Upload your dataset and 
+            create beautiful bar charts or line charts with just a few clicks. Export your 
+            charts as high-quality PNG images for presentations and reports. 💾
+          </p>
+          <p className="features">
+            📁 CSV Upload • 📈 Interactive Charts • 🖼️ PNG Export • 📱 Responsive Design
+          </p>
+        </div>
       </header>
       <main>
         <FileUploader onDataUpload={handleDataUpload} />

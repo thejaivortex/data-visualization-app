@@ -1,85 +1,135 @@
 # Data Visualization App
 
-This React application allows users to upload CSV files and visualize the data using interactive bar and line charts powered by Plotly. Users can also export the charts as PNG images.
+A React-based web application that allows users to upload CSV files and create interactive visualizations with export functionality.
 
-## Setup
+## Features
 
-1. Clone the repository.
-2. Install dependencies:
-npm start 
-3. Start the development server:
+- 📊 **CSV File Upload** - Upload and parse CSV files with validation
+- 📈 **Interactive Charts** - Bar charts and line charts powered by Plotly.js
+- 🔄 **Chart Toggle** - Switch between chart types with custom toggle buttons
+- 💾 **PNG Export** - Export charts as high-quality PNG images
+- 📱 **Responsive Design** - Works seamlessly on desktop and mobile devices
+- ✅ **Data Validation** - Proper error handling and file format validation
+
+## Screenshots
+
+### Application Overview
+Application Demo(image.png)
+
+### File Upload Interface
+File Upload(Screenshot 2025-05-23 213952.png)
+
+### Bar Chart Visualization
+Bar Chart(Screenshot 2025-05-23 214549.png)
+
+### Line Chart Visualization
+Line Chart(Screenshot 2025-05-23 214454.png)
+
+### Demonstration Link 
+Link - https://drive.google.com/file/d/18PLe_kSdjnlj7ZNuXmnvxCgYBOr53TVT/view?usp=drive_link
+
+## Technology Stack
+
+- **Frontend Framework:** React.js
+- **Charts:** Plotly.js
+- **CSV Parsing:** PapaParse
+- **Styling:** CSS3 with Flexbox
+- **Build Tool:** Create React App
+
+## Prerequisites
+
+Before running this application, make sure you have the following installed:
+
+- Node.js (version 14 or higher)
+- npm (comes with Node.js)
+
+## Installation & Setup
+
+1. **Clone the repository**
+git clone https://github.com/thejaivortex/data-visualization-app.git
+cd data-visualization-app
+
+2. **Install dependencies**
+
+npm install
 
 
+4. **Open your browser**
+- The application will automatically open at `http://localhost:3000`
+- If it doesn't open automatically, navigate to the URL manually
+
+## Usage Instructions
+
+1. **Upload CSV File**
+- Click the "Choose CSV File" button
+- Select a CSV file with at least 2 columns
+- The first column will be used for x-axis labels
+- Subsequent columns will be used for data series
+
+2. **View Visualizations**
+- Use the toggle buttons to switch between Bar Chart and Line Chart
+- Interact with charts using Plotly's built-in controls (zoom, pan, hover)
+
+3. **Export Charts**
+- Click "Export as PNG" to download the current chart as an image
+- The exported image will be saved to your Downloads folder
+
+## Sample Data
+
+You can test the application with this sample CSV data:
+
+Month,Sales,Expenses
+Jan,200,150
+Feb,220,160
+Mar,250,170
+Apr,270,180
+May,300,190
+Jun,320,200
+Jul,310,210
+Aug,330,220
+Sep,350,230
+Oct,370,240
+Nov,390,250
+Dec,420,260
 
 
+## Project Structure
 
-# Getting Started with Create React App
+ata-visualization-app/
+├── public/
+│ ├── index.html
+│ └── favicon.ico
+├── src/
+│ ├── components/
+│ │ ├── FileUploader.js
+│ │ ├── VisualizationPanel.js
+│ │ ├── BarChart.js
+│ │ ├── LineChart.js
+│ │ ├── ExportButton.js
+│ │ └── ChartSelector.js
+│ ├── utils/
+│ │ ├── csvParser.js
+│ │ └── exportUtils.js
+│ ├── styles/
+│ │ ├── App.css
+│ │ └── components/
+│ ├── App.js
+│ ├── index.js
+│ └── index.css
+├── package.json
+└── README.md
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Dependencies
 
-In the project directory, you can run:
+- `react`: Frontend framework
+- `plotly.js-dist-min`: Chart visualization library
+- `papaparse`: CSV parsing utility
 
-### `npm start`
+## Contact
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Created by Jai Balaje S - Frontend Developer Intern Application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Note:** This project was created as part of a frontend development internship application.
